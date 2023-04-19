@@ -2,11 +2,13 @@
 ---
 
 <header>
-  <div class="logo">
-    <a href="" class="logo"><img src="/logo.svg" alt="logo" /></a>
-  </div>
-  <div class="sprog">
-    <img src="/sprog.webp" alt="sprog" />
+  <div class="grid_1-1">
+    <div class="logo">
+      <a href="" class="logo"><img src="/logo.svg" alt="logo" /></a>
+    </div>
+    <div class="sprog">
+      <img src="/sprog.webp" alt="sprog" />
+    </div>
   </div>
 </header>
 
@@ -34,8 +36,14 @@
   }
   .logo img {
     width: 20%;
+    margin-left: 5%;
   }
   .sprog img {
-    width: 40%;
+    width: 20%;
+    margin-left: 80%;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 </style>
