@@ -1,13 +1,16 @@
 ---
-const url = "https://fwirxyyqrprjeczrvxer.supabase.co/rest/v1/Testimonials";
-const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ3aXJ4eXlxcnByamVjenJ2eGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTY3MDYsImV4cCI6MTk5NzAzMjcwNn0.VM-q6E4MMPN6MdZhxQO1EU2BTP7-eC2JSzm5zLEklLc";
-const options = {
-  method: "GET",
-  headers: {
-    apikey: api,
-  },
-};
+const { data } = Astro.props;
 
-const data = await fetch(url, options).then((res) => res.json());
-console.log(data);
+function getFirstNChars(str, length) {
+  return str.substring(0, length);
+}
 ---
+
+<article>
+  <h2>{data.title}</h2>
+
+  <p>
+    {getFirstNChars(data.description, 20)}...
+    <a href={"testimonials/" + data.title + "-" + data.id}>Læs mere nu</a>
+  </p>
+</article>
