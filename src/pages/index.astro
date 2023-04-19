@@ -1,5 +1,7 @@
 ---
+import Testimonial from "../components/Testimonial.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import AddTestimonial from "./addTestimonial.astro";
 ---
 
 <html lang="en">
@@ -12,6 +14,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   </head>
   <body>
     <h1>Astro</h1>
-    <MainLayout />
+    <MainLayout>
+      <Testimonials />
+      <AddTestimonial />
+    </MainLayout>
   </body>
 </html>
