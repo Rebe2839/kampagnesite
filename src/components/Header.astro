@@ -1,13 +1,41 @@
 ---
-
 ---
 
 <header>
-    <div class="logo">
-        <a href="" class="logo"><img src="/logo.svg" alt=""></a>
-    </div>
+  <div class="logo">
+    <a href="" class="logo"><img src="/logo.svg" alt="logo" /></a>
+  </div>
+  <div class="sprog">
+    <img src="/sprog.webp" alt="sprog" />
+  </div>
 </header>
 
 <style>
-    
+  header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 1rem;
+    box-shadow: 0 12px 28px 0 rgb(0 0 0 / 30%);
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+    gap: 30px;
+
+    text-align: center;
+    font-size: 18px;
+  }
+  .logo img {
+    width: 20%;
+  }
+  .sprog img {
+    width: 40%;
+  }
 </style>
