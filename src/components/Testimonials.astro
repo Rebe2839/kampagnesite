@@ -9,13 +9,15 @@ const options = {
 };
 
 const data = await fetch(url, options).then((res) => res.json());
-console.log(data);
+console.log("data4 ", data);
 
 import Testimonial from "../components/Testimonial.astro";
 ---
 
 {
+  //console.log("data3 ", data);
   data.map((testimonial) => {
+    //console.log("Her kommer testimonial", testimonial);
     return <Testimonial data={testimonial} />;
   })
 }

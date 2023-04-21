@@ -34,7 +34,6 @@
     fetch(url, options)
       .then((res) => res.json())
       .then((data) => {
-        console.log("data:", data);
         //når dden er færdig med at putte i databasen går den til filen addTestimonialfeedback "/" er for at sikre at den leder i roden
         window.location.href = "/addTestimonialFeedback";
       });
