@@ -6,14 +6,27 @@ import Header from "../components/Header.astro";
 import "../pages/styles/style.css";
 ---
 
-<MainLayout title="Forside">
-  <Testimonials />
-  <AddTestimonial />
-  <section class="video"></section>
-</MainLayout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <MainLayout title="Forside">
+      <Testimonials />
+      <AddTestimonial />
+      <section class="video_section">
+        <video class="video" controls src="/public/img/Playroom.mp4"></video>
+      </section>
+    </MainLayout>
+  </body>
+</html>
 
 <style>
-  .video {
+  .video_section {
     background-image: url(/public/img/wallpaper_in_hole.png);
     height: 900px;
 
@@ -21,10 +34,9 @@ import "../pages/styles/style.css";
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .body {
-    background-image: url(/public/img/wallpaper);
-    height: 100%;
-
+  body {
+    background-image: url(/public/img/wallpaper.png);
+    height: 900px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
