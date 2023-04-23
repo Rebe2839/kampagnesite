@@ -1,0 +1,41 @@
+---
+---
+
+<section class="video_section">
+  <div class="hole_wall">
+    <img src="../img/hole_in_wallpaper.png" alt="" />
+  </div>
+  <!-- <video controls autoplay class="video"><source src="../public/img/Playroom.mp4" /></video> -->
+  <video controls class="video"><source src="../public/img/Playroom.mp4" /></video>
+</section>
+<section class="game"></section>
+
+<style>
+  .video_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hole_wall img {
+    height: auto;
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hole_wall {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .video {
+    grid-column: 1;
+    grid-row: 1;
+
+    z-index: -1;
+    width: 100%;
+    height: 99%;
+  }
+</style>

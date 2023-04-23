@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  margin-inline: auto;
+}
+
+body {
+  background-image: url(/public/img/wallpaper.png);
+  height: 900px;
+  background-position: center;
+  background-size: cover;
+}
