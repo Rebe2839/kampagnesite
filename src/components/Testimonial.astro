@@ -6,11 +6,33 @@ function getFirstNChars(str, length) {
 }
 ---
 
-<article>
-  <h2>{data.title}</h2>
+<section>
+  <article>
+    <div class="testimonials">
+      <h2>{data.title}</h2>
 
-  <p>
-    {getFirstNChars(data.description, 20)}...
-    <a href={"testimonials/" + data.title + "-" + data.id}> læs mere nu</a>
-  </p>
-</article>
+      <p>
+        {getFirstNChars(data.description, 20)}...
+        <a href={"testimonials/" + data.title + "-" + data.id}> læs mere nu</a>
+      </p>
+    </div>
+  </article>
+</section>
+
+<style>
+  section {
+    background: var(--three);
+    padding: 1rem;
+
+    max-width: 400px;
+    margin-inline: auto;
+    margin-block: 50px;
+  }
+
+  article {
+    background: var(--one);
+    padding: 1rem;
+
+    padding-block: 6rem;
+  }
+</style>

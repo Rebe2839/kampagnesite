@@ -1,4 +1,5 @@
 ---
+import "../styles/style.css";
 ---
 
 <section>
@@ -7,7 +8,7 @@
     <div class="animation">
       <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-      <lottie-player id="playroom" src="public/playroom.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
+      <lottie-player id="playroom" src="public/playroom.json" background="transparent" speed="1" style="width: 400px; height: 400px;" autoplay></lottie-player>
     </div>
     <div class="text">
       <p>
@@ -15,35 +16,85 @@
         who till this day still haunts th<span>e</span> queen. Wil<span>l</span> you escape , or will you become part of the royal doll collection. D<span>o</span> you have the courage and i<span>m</span>agination it takes to figure out what secrets
         the playroom is hiding.
       </p>
+      <div class="code">
+        <button>Kampaign code</button>
+      </div>
     </div>
   </article>
 </section>
-
+<script>
+  LottieInteractivity.create({
+    player: "#playroom",
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0.5, 1.0],
+        type: "play",
+      },
+    ],
+  });
+</script>
 <style>
+  h1 {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+  }
+
+  p {
+    margin-bottom: 150px;
+  }
   span {
     font-weight: bold;
   }
   section {
-    margin-inline: 25%;
-    height: 600px;
+    max-width: 1000px;
+    margin-inline: auto;
     padding: 1rem;
-    background: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    background: var(--three);
 
-    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
   }
   article {
-    background-color: #faf0e6;
-    height: 565px;
+    background-color: var(--one);
     padding: 1rem;
   }
 
   lottie-player {
-    margin-top: -10%;
+    margin-top: -15%;
     margin-bottom: -5%;
+  }
+
+  .text {
+    margin-inline: 10%;
   }
 
   .animation {
     display: flex;
     justify-content: center;
+  }
+
+  .code {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    font-family: "open-sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--one);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+
+    border: none;
+    background: var(--five);
+    height: 60px;
+    width: 215px;
+    border-radius: 10px;
+
+    margin-bottom: 100px;
   }
 </style>

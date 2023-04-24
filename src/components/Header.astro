@@ -17,8 +17,8 @@ import Logo from "./Logo.astro";
       <span class="bar3"></span>
     </button>
     <ul>
-      <li><a href="#"></a>Game</li>
-      <li><a href="#"></a>Reviews</li>
+      <li><a href="#">Game</a></li>
+      <li><a href="#">Reviews</a></li>
     </ul>
   </nav>
 </div>
@@ -64,10 +64,13 @@ import Logo from "./Logo.astro";
     /* box-shadow: 0 12px 28px 0 rgb(0 0 0 / 30%); */
   }
   .header {
-    position: relative
+    position: sticky;
     top: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-evenly;
+    background-color: white;
+    box-shadow: 0px 15px 10px -15px #111;
   }
   .header nav ul {
     display: flex;
