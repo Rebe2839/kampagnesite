@@ -1,5 +1,5 @@
 ---
-const url = "https://fwirxyyqrprjeczrvxer.supabase.co/rest/v1/Testimonials?accepted=eq.true";
+const url = "https://fwirxyyqrprjeczrvxer.supabase.co/rest/v1/Testimonials?limit=3&offset=2";
 const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ3aXJ4eXlxcnByamVjenJ2eGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTY3MDYsImV4cCI6MTk5NzAzMjcwNn0.VM-q6E4MMPN6MdZhxQO1EU2BTP7-eC2JSzm5zLEklLc";
 const options = {
   method: "GET",
@@ -28,5 +28,12 @@ import Testimonial from "../components/Testimonial.astro";
   .testimonial_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 800px) {
+    .testimonial_wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
   }
 </style>

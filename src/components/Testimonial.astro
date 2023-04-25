@@ -34,11 +34,29 @@ function getFirstNChars(str, length) {
     padding: 1rem;
 
     padding-block: 6rem;
+
+    border-width: 0px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+  }
+
+  a:hover {
+    color: var(--six);
   }
 
   @media (max-width: 1200px) {
     h2 {
       font-size: 1.5rem;
+    }
+
+    section {
+      max-width: 240px;
+
+      margin-bottom: 150px;
+    }
+
+    article {
+      padding-block: 2rem;
     }
   }
 </style>
