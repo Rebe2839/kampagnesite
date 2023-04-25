@@ -17,8 +17,8 @@ import Logo from "./Logo.astro";
       <span class="bar3"></span>
     </button>
     <ul>
-      <li><a href="#">Game</a></li>
-      <li><a href="#">Reviews</a></li>
+      <li><a href="#quiz_game">Game</a></li>
+      <li><a href="#reviews">Reviews</a></li>
     </ul>
   </nav>
 </div>
@@ -28,6 +28,9 @@ import Logo from "./Logo.astro";
 
 <style>
 
+a:hover {
+  color:var(--six);
+}
   button {
     border
   }
@@ -95,13 +98,26 @@ import Logo from "./Logo.astro";
   @media (max-width: 1200px) {
     .banner {
       background: white;
+      box-shadow: 0px 15px 10px -15px #111;  
       padding: 2rem;
 
       display: flex;
       flex-flow: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       gap: 20px 40px;
+    }
+
+    .header {
+      display: flex;
+    }
+
+    .sprog {
+      display: none;
+    }
+
+    .menu {
+      margin-top: 3%;
     }
 
     .menu.shown a {
@@ -126,7 +142,8 @@ import Logo from "./Logo.astro";
     }
 
     .menu.shown {
-      display: contents;
+      display: flex;
+      flex-direction: column;
     }
 
     .menu ul {
