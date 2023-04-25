@@ -1,5 +1,5 @@
 ---
-const url = "https://fwirxyyqrprjeczrvxer.supabase.co/rest/v1/Testimonials";
+const url = "https://fwirxyyqrprjeczrvxer.supabase.co/rest/v1/Testimonials?accepted=eq.true";
 const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ3aXJ4eXlxcnByamVjenJ2eGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NTY3MDYsImV4cCI6MTk5NzAzMjcwNn0.VM-q6E4MMPN6MdZhxQO1EU2BTP7-eC2JSzm5zLEklLc";
 const options = {
   method: "GET",
@@ -14,12 +14,19 @@ console.log("data4 ", data);
 import Testimonial from "../components/Testimonial.astro";
 ---
 
-{
-  //console.log("data3 ", data);
-  data.map((testimonial) => {
-    //console.log("Her kommer testimonial", testimonial);
-    return <Testimonial data={testimonial} />;
-  })
-}
+<div class="testimonial_wrapper">
+  {
+    //console.log("data3 ", data);
+    data.map((testimonial) => {
+      //console.log("Her kommer testimonial", testimonial);
+      return <Testimonial data={testimonial} />;
+    })
+  }
+</div>
 
-<style></style>
+<style>
+  .testimonial_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+</style>
