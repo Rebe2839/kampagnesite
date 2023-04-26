@@ -5,7 +5,7 @@
   <div class="hole_wall">
     <img src="../img/hole_in_wallpaper.webp" alt="" />
   </div>
-  <video controls autoplay class="video"><source src="../public/img/Playroom.mp4" /></video>
+  <iframe style="position: absolute; top: 20%; left: 2%;" width="1600" height="1000" src="https://www.hjortnaeskea.dk/kea/09_indhold/Playroom.mp4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 </section>
 <section class="game"></section>
 
@@ -29,12 +29,10 @@
     grid-row: 1;
   }
 
-  .video {
+  iframe {
     grid-column: 1;
     grid-row: 1;
 
     z-index: -1;
-    width: 100%;
-    height: 94%;
   }
 </style>
